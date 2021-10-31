@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Digital Flow</title>
+    <link rel="icon" href="img/favicon-32x32.png">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
@@ -47,27 +49,28 @@
                                             <a class="nav-link burger-link" href="#section3">Наши преимущества</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link burger-link" href="#section4">Специальное предложение </a>
+                                            <a class="nav-link burger-link" href="#section4">Специальное предложение
+                                            </a>
                                         </li>
                                     </ul>
                                     <div class="body-burger-button">
-                                        <button class="burger-button" type="submit">Оставить заявку <img
-                                                class="burger-button-arrow" src="img/arrow-white.svg" alt=""></button>
+                                        <a href="#section4" class="burger-button" type="submit">Оставить заявку <img
+                                                class="burger-button-arrow" src="img/arrow-white.svg" alt=""></a>
                                     </div>
                                     <div class="body-burger-link">
-                                        <a href="">
+                                        <a class="body-burger-icon" href="">
                                             <img src="img/telegram.svg" alt="">
                                         </a>
-                                        <a href="">
+                                        <a class="body-burger-icon" href="">
                                             <img src="img/vk.svg" alt="">
                                         </a>
-                                        <a href="">
+                                        <a class="body-burger-icon" href="">
                                             <img src="img/inst.svg" alt="">
                                         </a>
-                                        <a href="">
+                                        <a class="body-burger-icon" href="">
                                             <img src="img/mail.svg" alt="">
                                         </a>
-                                        <a href="">
+                                        <a class="body-burger-icon" href="">
                                             <img src="img/whatsapp.svg" alt="">
                                         </a>
                                     </div>
@@ -81,8 +84,10 @@
                         web <br> applications
                     </h1>
                     <p class="header-paragraph">Повседневная практика.</p>
-                    <a class="header-button" href="#">Спец предложение <img class="header-button-arrow"
-                            src="img/arrow.svg" alt=""></a>
+                    <a class="header-button" href="#section4">Спец предложение
+                        <img class="header-button-arrow" src="img/arrow.svg" alt="">
+                        <img id="header-button-arrow-white" class="header-button-arrow" src="img/arrow-white.svg"
+                            alt=""></a>
                 </div>
 
             </div>
@@ -91,10 +96,10 @@
 
     <section id="section1" class="section1">
         <div class="section1-content">
-            <div class="img-section1">
+            <div class="img-section1 wow animate__animated animate__fadeInLeft">
             </div>
             <div class="container">
-                <div class="section1-text-content">
+                <div class="section1-text-content wow animate__animated animate__bounceInRight">
                     <h1 class="section1-title">О компании</h1>
                     <p class="section1-paragraph">Мы диджитал агентство занимаемся полным циклом <br> продвижения
                         компаний в интернете.</p>
@@ -109,7 +114,7 @@
 
     <section id="section2" class="section2">
         <div class="container">
-            <div class="section2-content">
+            <div class="section2-content wow animate__animated animate__zoomIn">
                 <h1 class="section2-title">Что мы предлагаем</h1>
                 <div class="section2-box">
                     <div class="row row-section2">
@@ -192,7 +197,7 @@
                         </div>
                         <div class="col section2-col-button">
                             <div class="box">
-                                <a class="section2-button" href="#">Подробнее </a>
+                                <a class="section2-button" href="index-error.html">Подробнее </a>
                             </div>
                         </div>
                         <div class="col section2-col-border">
@@ -209,7 +214,7 @@
 
     <section id="section3" class="section3">
         <div class="container">
-            <div class="section3-content">
+            <div class="section3-content wow animate__animated animate__fadeInDown">
                 <h1 class="section3-title">
                     Наши преимущества
                 </h1>
@@ -241,30 +246,36 @@
     </section>
 
     <section class="section4">
-        <div class="section4-content">
+        <div class="section4-content ">
             <div class="img-section4">
                 <div class="container">
-                    <div class="form-contact">
+                    <div class="form-contact wow animate__animated animate__rollIn">
                         <h1 class="section4-title1">Заявка</h1>
-                        <div class="name">
-                            <h2 class="section4-form-title">Ваше имя</h2>
-                            <input class="form" type="text">
-                        </div>
-                        <div class="mail">
-                            <h2 class="section4-form-title">Ваш Email</h2>
-                            <input class="form" type="email">
-                        </div>
-                        <div class="message">
-                            <h2 class="section4-form-title">Сообщение</h2>
-                            <textarea class="form" cols="22" rows="2"></textarea>
-                        </div>
-                        <button class="form-button" type="submit">Отправить <img class="form-button-arrow"
-                                src="img/arrow-white.svg" alt=""></button>
+                        <form action="sender.php">
+                            <div class="name">
+                                <h2 class="section4-form-title">Ваше имя</h2>
+                                <input required class="form" type="text" name="name">
+                            </div>
+                            <div class="mail">
+                                <h2 class="section4-form-title">Ваш Email</h2>
+                                <input required class="form" type="email" name="email">
+                            </div>
+                            <div class="message">
+                                <h2 class="section4-form-title">Сообщение</h2>
+                                <textarea required class="form" cols="22" rows="2" name="text"></textarea>
+                            </div>
+                            <button class="form-button" type="submit">Отправить
+                                <img class="form-button-arrow" src="img/arrow-white.svg" alt="">
+                                <img id="form-button-arrow-black" class="form-button-arrow" src="img/arrow.svg" alt="">
+                            </button>
+                            <div class="status"></div>
+                        </form>
+
                     </div>
                 </div>
             </div>
             <div id="section4" class="container">
-                <div class="section4-text-content">
+                <div class="section4-text-content wow animate__animated animate__jackInTheBox">
                     <h1 class="section4-title2">Спец предложения </h1>
                     <div class="suggestions">
                         <div class="row section4-row">
@@ -274,7 +285,7 @@
                                     <p class="rectangle-paragraph">продающая<br> посадочная<br> страница. </p>
                                     <p class="old-price">160 000 ₸</p>
                                     <p class="new-price">150 000 ₸</p>
-                                    <a class="rectangle-button" href="#">Подробнее</a>
+                                    <a class="rectangle-button" href="index-error.html">Подробнее</a>
                                 </div>
                             </div>
                             <div class="col">
@@ -283,7 +294,7 @@
                                     <p class="rectangle-paragraph">Корпоративный <br> сайт </p>
                                     <p class="old-price">170 000 ₸</p>
                                     <p class="new-price">150 000 ₸</p>
-                                    <a class="rectangle-button" href="#">Подробнее</a>
+                                    <a class="rectangle-button" href="index-error.html">Подробнее</a>
 
                                 </div>
                             </div>
@@ -292,7 +303,7 @@
                                     <h2 class="rectangle-title">Контекстная реклама</h2>
                                     <p class="rectangle-paragraph">Запуск <br> контекстной <br> рекламы на месяц</p>
                                     <p class="new-price">Бесплатно</p>
-                                    <a class="rectangle-button" href="#">Подробнее</a>
+                                    <a class="rectangle-button" href="index-error.html">Подробнее</a>
 
                                 </div>
                             </div>
@@ -305,14 +316,14 @@
 
         <footer class="footer">
             <div class="container">
-                <div class="footer-content">
+                <div class="footer-content wow animate__animated animate__slideInLeft">
                     <div class="row footer-row">
                         <div class="col footer-col">
                             <h2 class="footer-title">Контакты</h2>
                             <div class="footer-img">
                                 <div class="footer-img-box">
-                                   <img class="footer-icon" src="img/Vector.svg" alt=""> 
-                                   <p class="footer-paragraph">+7 777 7777 77 77</p>
+                                    <img class="footer-icon" src="img/Vector.svg" alt="">
+                                    <p class="footer-paragraph">+7 777 7777 77 77</p>
                                 </div>
                                 <div class="footer-img-box">
                                     <img class="footer-icon" src="img/fi_mail.svg" alt="">
@@ -322,33 +333,43 @@
                                     <img class="footer-icon" src="img/fi_map-pin.svg" alt="">
                                     <p class="footer-paragraph">г. Москва</p>
                                 </div>
-                                
+
                             </div>
 
                         </div>
                         <div class="col footer-col2">
                             <h2 class="footer-title">digital flow</h2>
-                            <a class="footer-link" href="">
-                                <img src="img/telegram.svg" alt="">
-                            </a>
-                            <a class="footer-link" href="">
-                                <img src="img/vk.svg" alt="">
-                            </a>
-                            <a class="footer-link" href="">
-                                <img src="img/inst.svg" alt="">
-                            </a>
-                            <a class="footer-link" href="">
-                                <img src="img/mail.svg" alt="">
-                            </a>
-                            <a class="footer-link" href="">
-                                <img src="img/whatsapp.svg" alt="">
-                            </a>
+                            <div class="footer-icons">
+                                <a class="footer-link" href="">
+                                    <img class="footer-icon" src="img/telegram.svg" alt="">
+                                </a>
+                                <a class="footer-link" href="">
+                                    <img class="footer-icon" src="img/vk.svg" alt="">
+                                </a>
+                                <a class="footer-link" href="">
+                                    <img class="footer-icon" src="img/inst.svg" alt="">
+                                </a>
+                                <a class="footer-link" href="">
+                                    <img class="footer-icon" src="img/mail.svg" alt="">
+                                </a>
+                                <a class="footer-link" href="">
+                                    <img class="footer-icon" src="img/whatsapp.svg" alt="">
+                                </a>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
     </section>
+
+    <script src="wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>

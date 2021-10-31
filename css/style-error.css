@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+.section{
+    background: url(../img/error.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+}
+.content{
+    text-align: center;
+    padding-top: 10em;
+}
+.section-title{
+    font-size: 122px;
+    color: #fff;
+}
+.section-paragraph{
+    font-weight: 500;
+    font-size: 43px;
+    color: #fff;
+    padding-bottom: 2em;
+}
+.section-button{
+    padding: 15px 20px;
+    border: 1px solid #fff;
+    text-decoration: none;
+    color: #fff;
+    
+}
+.section-arrow{
+    padding-left: 1.5em;
+}
+.section-button:hover{
+    color: #fff;
+    
+}
+
+@media(max-width:411px){
+    .section-title{
+        font-size: 60px;
+    }
+    .section-paragraph{
+        font-size: 30px;
+    }
+    .section-arrow{
+        padding-left: 0.5em;
+    }
+}

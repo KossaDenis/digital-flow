@@ -17,12 +17,13 @@ body{
     background-repeat: no repeat;
     background-position: center bottom;
     background-attachment: fixed;
+    min-height: 100vh;
 }
 .header-content{
     padding-bottom: 17em;
 }
 .Navbar{
-    background: none !important;
+    background: rgba(136, 134, 134, 0.493) !important;
 }
 .burger{
     border: none;
@@ -31,12 +32,15 @@ body{
 .burger-icon{
     background-image: url(../img/burger.svg) !important;
 }
+.body-burger-icon{
+    margin-right: 0.5em;
+}
 .burger-content{
     padding: 1em 2.5em;
 }
 .burger-bg{
     background: #191A1E;
-    width: 485px;
+    width: 386px;
 }
 .burger-link{
     color: rgba(255, 255, 255, 0.3) !important;
@@ -57,8 +61,14 @@ body{
     background: linear-gradient(90deg, #074D88 0%, #61B3C9 100%);
     border: none;
 }
+.burger-button:hover{
+    color: #fff;
+}
 .burger-button-arrow{
     padding-left: 2em;
+}
+#header-button-arrow-white{
+    display: none;
 }
 .body-burger-button{
     padding-top: 8em;
@@ -257,11 +267,15 @@ body{
     font-size: 16px;
     font-weight: 500;
     background: none;
+    margin-bottom: 1em;
 }
 .form-button:hover{
     background: #fff;
     color: #1A1F25;
     transition: all .3s;
+}
+#form-button-arrow-black{
+    display: none;
 }
 .form-button-arrow{
     padding-left: 2em;
@@ -358,8 +372,8 @@ body{
     margin-right: 1em;
 }
 .footer-icon{
-    width: 7%;
-    padding-bottom: 3em;
+    width: 2em;
+    padding-bottom: 1em;
 }
 
 
@@ -387,6 +401,9 @@ body{
     }
     .section4-content{
         flex-direction: column;
+    }
+    .img-section1{
+        min-height: 43vh;
     }
 }
 @media(max-width:651px){
